@@ -1,0 +1,304 @@
+/* CSS Written for vendors page by Bryan Ramos */
+
+#content {
+    padding: 0px 0 40px 0;
+}
+.localheader {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    background: #eee url(http://thesocietyep.com/wp-content/uploads/2020/02/vendors-header.jpg);
+    background-size: cover;
+    background-position: center bottom;
+}
+.localheader h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    display: inline-block;
+    text-shadow: 0px 0px 10px rgba(0,0,0,.5);
+}
+.vendors-page-localnav { /* sticky nav with white background */
+    position: sticky;
+    top: 0;
+    z-index: 55;
+    background: #fff;
+}
+.vendors-page-localnav {
+    padding: 15px 0;
+    display: flex;
+    justify-content: flex-end;
+}
+.vendors-page-localnav .localnav-aside {
+    display: flex;
+}
+.vendors-page-actions-sort {
+    display: flex;
+    align-items: center;
+}
+#vendors-type {
+    padding: 5px 5px;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+}
+#sort select {
+    box-shadow: none;
+    -webkit-appearance: none;
+}
+#sort select {
+    background-color: #e7e7e8;
+    border-color: #e7e7e8;
+    color: #1c1d1f;
+    font-size: 11px;
+    font-weight: 500;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    padding: 13px 20px 12px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 9;
+    padding-right: 40px;
+    height: auto;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    select:focus, textarea:focus, input:focus {
+        font-size: 16px;
+    }
+}
+.vendors-page-actions-sort form {
+    position: relative;
+}
+.vendors-page-actions-sort form::after {
+    content: "+";
+    font-family: "LineAwesome";
+    font-size: 13px;
+    line-height: 1em;
+    width: 30px;
+    text-align: left;
+    color: inherit;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    z-index: 55;
+}
+#sort select:focus, #vendors-type:focus {
+    outline: none;
+}
+#sort select::after {
+    content: "\f017";
+    font-size: 11px;
+    line-height: 1em;
+    width: 30px;
+    text-align: left;
+    color: #1c1d1f;
+    position: absolute;
+    top: 14px;
+    right: 0;
+    z-index: 1;
+}
+.vendors-page-actions-grid-type { /* wrapper for grid 2-cols or 3-cols buttons */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    margin-right: 24px;
+}
+.vendors-page-actions-grid-type button {
+    background: transparent;
+    border: none;
+}
+.vendors-page-actions-grid-type button:focus {
+    outline: none;
+    box-shadow: none;
+}
+.vendors-page-actions-grid-type button.active svg path { 
+    fill: var(--society-accent-color) !important;
+}
+@media screen and (max-width: 600px) { /* hide grid toggle options */
+    .vendors-page-actions-grid-type {
+        display: none;
+    }
+}
+/* cards wrapper */
+.cards-parent {
+    display: -ms-grid;
+    display: grid;
+}
+.cards-parent {
+    grid-gap: 12px;
+}
+.cards-parent.cols-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.cards-parent.cols-2 {
+    grid-template-columns: 1fr 1fr;
+}
+@media screen and (min-width: 992px) {
+    .cards-parent {
+        grid-gap: 36px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .cards-parent, .cards-parent.cols-3, .cards-parent.cols-2 {
+        grid-template-columns: 1fr !important;
+        grid-gap: 36px;
+    }
+}
+.cards-parent .card {
+    border: 1px solid #e8e8ea;
+}
+.card {
+    border-radius: 0px;
+}
+.card-image {
+    padding-top: 200px;
+    background: #eee url("https://malina.artstudioworks.net/wp-content/uploads/2018/10/home-hero-img.jpg");
+    background-size: cover;
+    background-position: center center;
+    -webkit-transition: 500ms padding-top ease;
+    transition: 500ms padding-top ease;
+}
+.cards-parent.cols-2 .card-image {
+    padding-top: 300px;
+}
+@media screen and (max-width: 600px) {
+    .card-image {
+        padding-top: 250px;
+    }
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+.vendor-type-tag { /* tag for vendor type above vendor title */
+    color: #adadad;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 13px;
+    text-transform: uppercase;
+}
+.card .card-title {
+    font-size: 22px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.card-text {
+    flex-grow: 1;
+    font-size: 15px;
+    color: #696c6d;
+}
+.card-links {
+    margin-bottom: 20px;
+}
+.cards-parent .card-link {
+    color: #333;
+}
+.card .card-links a:focus, .card .card-links a:hover {
+    color: var(--society-accent-color);
+}
+.card-links .card-link:hover svg, .cards-links .card-link:focus svg {
+    fill: var(--society-accent-color);
+}
+.card .btn-primary {
+    background: var(--society-accent-color);
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+    border-color: var(--society-accent-color);
+    font-family: var(--society-font-family-heading), Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    padding: 0.875rem .75rem;
+}
+.card .btn-primary:hover {
+    background: #dfdcde;
+    border: 1px solid #dfdcde;
+}
+/* vendors images */
+#arte-de-papel .card-image {
+    background-image: url(//thesocietyep.com/wp-content/uploads/2020/02/arte-de-papel.jpg);
+}
+#onefifty-sunset .card-image {
+    background-image: url(//thesocietyep.com/wp-content/uploads/2020/02/onefifty-sunset.jpg);
+}
+#ardovinos .card-image {
+    background-image: url(//thesocietyep.com/wp-content/uploads/2020/02/ardovinos.jpg);
+}
+#bridal-novias .card-image {
+    background-image: url(//thesocietyep.com/wp-content/uploads/2020/02/bridal-novias.jpg);
+    background-position: center top;
+}
+#bright-nights-ep .card-image {
+    background-image: url(//thesocietyep.com/wp-content/uploads/2020/02/bright-nights-ep.jpg);
+}
+#chantilly .card-image {
+    background-image: url(//thesocietyep.com/wp-content/uploads/2020/02/chantilly.jpg);
+    background-position: right center;
+}
+#coronado-country-club .card-image {
+    background-image: url(//thesocietyep.com/wp-content/uploads/2020/02/coronado-country-club.jpg);
+    background-position: bottom center;
+}
+#child-at-heart-lettering .card-image {
+    background-image: url(//thesocietyep.com/wp-content/uploads/2020/02/child-at-heart-lettering.jpg);
+}
+#debbies-bloomers .card-image {
+    background-image: url(//thesocietyep.com/wp-content/uploads/2020/02/debbies-bloomers.jpg);
+}
+#dry-bar .card-image {
+    background-image: url(//thesocietyep.com/wp-content/uploads/2020/02/dry-bar.jpg);
+}
+#ella-blu .card-image {
+    background-image: url(//thesocietyep.com/wp-content/uploads/2020/02/ella-blu.jpg);
+}
+#el-paso-country-club .card-image {
+    background-image: url(//thesocietyep.com/wp-content/uploads/2020/02/el-paso-country-club.jpg);
+}
+#elite-cakes .card-image {
+    background-image: url(//thesocietyep.com/wp-content/uploads/2020/02/elite-cakes.jpg);
+}
+#elysa-simons .card-image {
+    background-image: url(//thesocietyep.com/wp-content/uploads/2020/02/elysa-simons.jpg);
+}
+#funboxx-photo-booth .card-image {
+    background-image: url(//thesocietyep.com/wp-content/uploads/2020/02/funboxx-photobooth.jpg);
+}
+#jinny-riddle .card-image {
+    background-image: url(//thesocietyep.com/wp-content/uploads/2020/02/jinny-riddle.jpg);
+}
+#life-in-tandom .card-image {
+    background-image: url(//thesocietyep.com/wp-content/uploads/2020/02/life-in-tandom.jpg);
+}
+#mr-photobooth .card-image {
+    background-image: url(//thesocietyep.com/wp-content/uploads/2020/02/mr-photobooth.jpg);
+}
+#ncdj .card-image {
+    background-image: url(http://thesocietyep.com/wp-content/uploads/2020/02/ncdj.jpg);
+}
+#sip-away .card-image {
+    background-image: url(http://thesocietyep.com/wp-content/uploads/2020/02/sip-away.jpg);
+}
+#stephane-lemaire .card-image {
+    background-image: url(http://thesocietyep.com/wp-content/uploads/2020/02/stephane-lemaire.jpg);
+}
+#sweet-fancy .card-image {
+    background-image: url(http://thesocietyep.com/wp-content/uploads/2020/02/sweet-fancy.jpg);
+}
+#table-occasions .card-image {
+    background-image: url(http://thesocietyep.com/wp-content/uploads/2020/02/table-occasions.jpg);
+}
+#the-city-magazine .card-image {
+    background-image: url(http://thesocietyep.com/wp-content/uploads/2020/02/the-city-magazine.jpg);
+}
+#three-sisters .card-image {
+    background-image: url(http://thesocietyep.com/wp-content/uploads/2020/02/three-sisters.jpg);
+}
+#veronica-cook .card-image {
+    background-image: url(http://thesocietyep.com/wp-content/uploads/2020/02/veronica-cook.jpg);
+}
+
+
